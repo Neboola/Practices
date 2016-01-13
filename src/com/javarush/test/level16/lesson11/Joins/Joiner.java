@@ -14,7 +14,7 @@ class Joiner extends Thread {
         try {
             sleeper.join();
         } catch(InterruptedException e) {
-            System.out.println("Interrupted");
+            System.out.println("Joiner is Interrupted");
         }
         System.out.println(getName() + " join completed");
     }
