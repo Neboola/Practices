@@ -18,8 +18,7 @@ public class Solution {
     public static List<Thread> threads = new ArrayList<Thread>(5);
 }
 
-class FirstThread extends Thread
-{
+class FirstThread extends Thread {
     @Override
     public void run()
     {
@@ -27,8 +26,7 @@ class FirstThread extends Thread
     }
 }
 
-class SecondThread extends Thread
-{
+class SecondThread extends Thread {
     @Override
     public void run()
     {
