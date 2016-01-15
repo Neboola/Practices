@@ -21,7 +21,7 @@ import com.javarush.test.level20.lesson02.task05.Solution;
  */
 public class MySolution2 {
 
-    private static int count = 10;
+    private static int count = 15;
 
     public static void main(String[] args) throws InterruptedException {
         new GenerateThread(1);
