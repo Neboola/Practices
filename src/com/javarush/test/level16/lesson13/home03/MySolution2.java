@@ -1,5 +1,7 @@
 package com.javarush.test.level16.lesson13.home03;
 
+import com.javarush.test.level20.lesson02.task05.Solution;
+
 /**
  * Created by Neboola on 15.01.2016.
  *
@@ -20,41 +22,28 @@ package com.javarush.test.level16.lesson13.home03;
 public class MySolution2 {
 
     private static int count = 15;
-    private static volatile int countCreatedThreads = 0;
 
     public static void main(String[] args) throws InterruptedException {
-        new GenerateThread();
-        //Thread.sleep(1000);
-
-    }
-
-    private static synchronized String incrementCountCreatedThreads() {
-        System.out.println("countCreatedThreads = " + countCreatedThreads);
-        return String.valueOf(++countCreatedThreads);
+        new GenerateThread(1);
     }
 
     private static class GenerateThread extends Thread {
 
+        private static int countCreatedThreads;
 
-
-        public GenerateThread() {
-            super(incrementCountCreatedThreads());
-            System.out.println(this);
+        public GenerateThread(int number) {
+            super(String.valueOf(number));
+            countCreatedThreads = number;
             start();
-
         }
 
         @Override
         public void run() {
-            while (countCreatedThreads <= count ) {
-
-                new GenerateThread();
-
-
+            if (countCreatedThreads < count ) {
+                new GenerateThread(countCreatedThreads + 1);
             }
-
+            System.out.println(this);
         }
-
 
         @Override
         public String toString() {
