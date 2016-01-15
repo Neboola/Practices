@@ -3,7 +3,7 @@ package com.javarush.test.level16.lesson13.home03;
 import com.javarush.test.level20.lesson02.task05.Solution;
 
 /**
- * Created by Neboola on 15.01.2016.
+ * Created by OmniTool on 15.01.2016.
  *
  * 3. Рекурсивное создание нитей
 
@@ -21,7 +21,7 @@ import com.javarush.test.level20.lesson02.task05.Solution;
  */
 public class MySolution2 {
 
-    private static int count = 15;
+    private static int count = 10;
 
     public static void main(String[] args) throws InterruptedException {
         new GenerateThread(1);
