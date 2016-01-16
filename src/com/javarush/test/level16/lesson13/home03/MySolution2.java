@@ -40,7 +40,7 @@ public class MySolution2 {
         @Override
         public void run() {
             if (countCreatedThreads < count ) {
-                new GenerateThread(countCreatedThreads + 1);
+                new GenerateThread(++countCreatedThreads);
             }
             System.out.println(this);
         }
