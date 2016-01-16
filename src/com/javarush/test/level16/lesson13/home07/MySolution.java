@@ -23,7 +23,7 @@ import java.util.List;
  2.3. Когда игрок выполнит все действия из steps, то он считается победителем. Выведите [getName() + ":победитель!"].
  2.4. Когда найден победитель, то игра останавливается, и остальные игроки считаются побежденными. Выведите для них [getName() + ":проиграл"].
  */
-public class MySolution {
+public class MySolution { //слепая реализация
 
     private static List<String> steps = new ArrayList<String>();
     private static boolean isWinnerFound = false;
