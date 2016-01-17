@@ -8,6 +8,6 @@ import com.javarush.test.level16.lesson13.bonus01new.ImageReader;
 public class BmpReader implements ImageReader {
     @Override
     public void initReading() {
-        System.out.println("BmpReader is ready");
+        System.out.println("BmpReader готов");
     }
 }

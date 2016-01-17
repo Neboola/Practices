@@ -6,7 +6,8 @@ package com.javarush.test.level16.lesson13.bonus01new;
 public enum ImageTypes {
     BMP,
     JPG,
-    PNG;
+    PNG,
+    JPEG;
 
     private ImageTypes() {}
 }

@@ -8,6 +8,6 @@ import com.javarush.test.level16.lesson13.bonus01new.ImageReader;
 public class JpgReader implements ImageReader {
     @Override
     public void initReading() {
-        System.out.println("JpgReader is ready");
+        System.out.println("JpgReader готов");
     }
 }

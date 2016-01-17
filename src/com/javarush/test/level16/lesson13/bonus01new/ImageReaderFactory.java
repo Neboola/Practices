@@ -11,17 +11,17 @@ public class ImageReaderFactory {
     public ImageReader makeImageReader(ImageTypes type) {
         switch (type) {
             case BMP:
-                System.out.println("BmpReader created");
+                System.out.println("Reader создан для " + type);
                 return new BmpReader();
             case JPG:
-                System.out.println("JpgReader created");
+                System.out.println("Reader создан для " + type);
                 return new JpgReader();
             case PNG:
-                System.out.println("PngReader created");
+                System.out.println("Reader создан для " + type);
                 return new PngReader();
             default:
-                System.out.println("NoReader created");
-                throw new IllegalArgumentException("Неизвестный тип картинки");
+                System.out.println("Reader не создан");
+                throw new IllegalArgumentException("Неизвестный тип картинки: " + type);
         }
     }
 }

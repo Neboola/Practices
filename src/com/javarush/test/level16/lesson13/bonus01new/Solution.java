@@ -27,9 +27,15 @@ public class Solution {
         images.add(new Image(ImageTypes.BMP));
         images.add(new Image(ImageTypes.JPG));
         images.add(new Image(ImageTypes.PNG));
+        images.add(new Image(ImageTypes.JPEG));
 
         for (int i = 0; i < images.size(); i++) {
-            readers.add(factory.makeImageReader(images.get(i).getType()));
+            try {
+                readers.add(factory.makeImageReader(images.get(i).getType()));
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
+
         }
 
         for (ImageReader reader : readers) {
