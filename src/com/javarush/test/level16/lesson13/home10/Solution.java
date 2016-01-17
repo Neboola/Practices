@@ -47,7 +47,7 @@ public class Solution {
         ReadFileInterface f = new ReadFileThread();
         f.setFileName(fileName);
         f.start();
-        //f.join();
+        f.join();
 
     }
 
