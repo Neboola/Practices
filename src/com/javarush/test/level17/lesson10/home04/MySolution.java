@@ -4,28 +4,28 @@ package com.javarush.test.level17.lesson10.home04;
 Установить модификатор synchronized только тем методам, которым необходимо
 */
 
-public class Solution {
+public class MySolution {
     private double param = Math.random();
 
     private void method0() {
         double i = method3();
     }
 
-    protected synchronized void method1(String param1) {
-        Solution solution = new Solution();
+    protected void method1(String param1) {
+        MySolution solution = new MySolution();
         solution.method0();
     }
 
-    public void  method2(int param1) {
+    public synchronized void  method2(int param1) {
         param1++;
     }
 
-    synchronized double  method3() {
+    double  method3() {
         double random = Math.random();
         return random + param;
     }
 
-    private synchronized  void method4() {
+    private void method4() {
         new StringBuilder().append(1).append(1).append(1).append(1);
     }
 

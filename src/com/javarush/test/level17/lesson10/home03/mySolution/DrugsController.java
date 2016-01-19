@@ -1,15 +1,16 @@
-package com.javarush.test.level17.lesson10.home03;
+package com.javarush.test.level17.lesson10.home03.mySolution;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class DrugsController {
+
     public static Map<Drug, Integer> allDrugs = new HashMap<Drug, Integer>();   // <Лекарство, Количество>
 
     static {
         Drug panadol = new Drug();
         panadol.setName("Панадол");
-        allDrugs.put(panadol, 5);
+        allDrugs.put(panadol, 15);
 
         Drug analgin = new Drug();
         analgin.setName("Анальгин");
@@ -17,7 +18,7 @@ public class DrugsController {
 
         Drug placebo = new Drug();
         placebo.setName("Плацебо");
-        allDrugs.put(placebo, 1);
+        allDrugs.put(placebo, 13);
     }
 
     public synchronized void sell(Drug drug, int count) {
@@ -26,6 +27,7 @@ public class DrugsController {
             System.out.println("Нет в наличии");
         }
         Integer currentCount = allDrugs.get(drug);
+
         if (currentCount < count) {
             System.out.println(String.format("%s хочет %s %d шт. В наличии - %d", name, drug.getName(), count, currentCount));
         } else {

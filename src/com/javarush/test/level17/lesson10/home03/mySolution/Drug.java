@@ -1,4 +1,4 @@
-package com.javarush.test.level17.lesson10.home03;
+package com.javarush.test.level17.lesson10.home03.mySolution;
 
 public class Drug {
     private String name;
