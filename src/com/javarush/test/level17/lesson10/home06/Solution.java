@@ -9,7 +9,7 @@ package com.javarush.test.level17.lesson10.home06;
 
 Подсказка: использовать блокировку на уровне класса.
 */
-public class SolutionTwo {  //http://pastebin.com/Bimf1RS2
+public class Solution {  //http://pastebin.com/Bimf1RS2
     public static void main(String[] args) {
         Person diana = new Person("Diana");
         Person igor = new Person("Igor");

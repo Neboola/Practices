@@ -32,6 +32,8 @@ public class Bankomat {
     private static Thread addMoney = new Thread() {
         @Override
         public void run() {
+            account.deposit("10");
+            account.deposit("10");
             while (!isStopped) {
                 account.deposit("1000");            //кладем на счет
                 try {
