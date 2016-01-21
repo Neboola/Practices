@@ -18,7 +18,7 @@ import java.util.List;
 Сигнатуру метода main не менять.  Метод joinData должен вызываться в main.
 */
 
-public class Solution {
+public class SolutionOne {
     public static List<String> allLines = new ArrayList<String>();
     public static List<String> forRemoveLines = new ArrayList<String>();
 
@@ -42,7 +42,7 @@ public class Solution {
         }catch (Exception e){}
         try
         {
-            new Solution().joinData();
+            new SolutionOne().joinData();
         }
         catch (CorruptedDataException e)
         {
