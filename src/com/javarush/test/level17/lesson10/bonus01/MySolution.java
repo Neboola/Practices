@@ -121,7 +121,7 @@ public class MySolution { //слепое решение
   System.out.println();
  }
 
- static boolean isValid(String value, String datePattern) {
+ private static boolean isValid(String value, String datePattern) {
 
   if (value == null || datePattern == null || datePattern.length() <= 0) {
    return false;
