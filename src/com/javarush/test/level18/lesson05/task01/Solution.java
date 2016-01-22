@@ -17,12 +17,12 @@ public class Solution { // http://info.javarush.ru/JavaRush_tasks_discussion/201
         // Создаем поток-записи-байт-в-файл
         FileOutputStream outputStream = new FileOutputStream("result");
         byte[] buffer = new byte[inputStream.available()];
-        while (inputStream.available() > 0) {
+        //while (inputStream.available() > 0) {
             //читаем весь файл одним куском
             int count = inputStream.read(buffer);
             outputStream.write(buffer, 0, count);
 
-        }
+        //}
         inputStream.close();
         outputStream.close();
     }
