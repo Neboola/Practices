@@ -15,34 +15,30 @@ import java.nio.channels.FileChannel;
 
 public class AmigoOutputStream extends FileOutputStream {
     private FileOutputStream original;
+    public static String fileName = "C:/tmp/result.txt";
 
-    public AmigoOutputStream(FileOutputStream original) throws FileNotFoundException
-    {
+    public AmigoOutputStream(FileOutputStream original) throws FileNotFoundException {
         super(String.valueOf(original));
         this.original = original;
     }
 
     @Override
-    public void write(int b) throws IOException
-    {
+    public void write(int b) throws IOException {
         super.write(b);
     }
 
     @Override
-    public void write(byte[] b) throws IOException
-    {
+    public void write(byte[] b) throws IOException {
         super.write(b);
     }
 
     @Override
-    public void write(byte[] b, int off, int len) throws IOException
-    {
+    public void write(byte[] b, int off, int len) throws IOException {
         super.write(b, off, len);
     }
 
     @Override
-    public void close() throws IOException
-    {
+    public void close() throws IOException {
         flush();
         original.write("JavaRush © 2012-2013 All rights reserved.".getBytes());
         original.close();
@@ -50,24 +46,20 @@ public class AmigoOutputStream extends FileOutputStream {
     }
 
     @Override
-    public FileChannel getChannel()
-    {
+    public FileChannel getChannel() {
         return super.getChannel();
     }
 
     @Override
-    protected void finalize() throws IOException
-    {
+    protected void finalize() throws IOException {
         super.finalize();
     }
 
     @Override
-    public void flush() throws IOException
-    {
+    public void flush() throws IOException {
         super.flush();
     }
 
-    public static String fileName = "C:/tmp/result.txt";
 
     public static void main(String[] args) throws IOException
     {
