@@ -40,6 +40,7 @@ public class MySolution { //слепое решение
             if (arr[i] == max) System.out.print((char)i + "(" + arr[i] + "раз)" + " ");
         }
         fis.close();
+        r.close();
 
 
     }

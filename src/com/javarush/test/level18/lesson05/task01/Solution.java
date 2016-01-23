@@ -25,5 +25,6 @@ public class Solution { // http://info.javarush.ru/JavaRush_tasks_discussion/201
         //}
         inputStream.close();
         outputStream.close();
+
     }
 }

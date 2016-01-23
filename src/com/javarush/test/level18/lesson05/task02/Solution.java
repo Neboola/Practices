@@ -29,5 +29,6 @@ public class Solution {
 
         reader.close();
         in.close();
+        reader.close();
     }
 }

@@ -39,6 +39,7 @@ public class MySolution { //слепое решение
    if (arr[i] == min) System.out.print((char)i + "(" + arr[i] + "раз)" + " ");
   }
   fis.close();
+  r.close();
 
 
  }

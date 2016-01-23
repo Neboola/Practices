@@ -32,9 +32,12 @@ public class Solution { // слепое решение
         fis2.write(bufferForFIS2, 0, count2);
         fis3.write(bufferForFIS3, 0, count3);
 
+
         fis1.close();
         fis2.close();
         fis3.close();
+
+        reader.close();
 
 
     }

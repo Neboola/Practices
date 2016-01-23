@@ -43,6 +43,7 @@ public class MySolution { // слепое решение
 
 
         fileInputStream.close();
+        reader.close();
 
     }
 }

@@ -28,6 +28,7 @@ public class MySolution { //слепое решение
         System.out.println("\\r : " + (int)'\r');
         System.out.println("\\n : " + (int)'\n');
         fs.close();
+        r.close();
     }
 
 }
