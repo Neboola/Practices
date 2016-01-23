@@ -41,4 +41,32 @@ public class Solution {
             arr[l - 1 - i] = temp;
         }
     }
+
+    static void reverse(int[] arr) {
+
+        if (arr == null || arr.length < 1) {
+            return;
+        }
+        System.out.println("Было: ");
+        printArr(arr);
+        int l = arr.length;
+        for (int i = 0; i < l / 2 ; i++) {
+            int temp = arr[i];
+            arr[i] = arr[l - 1 - i];
+            arr[l - 1 - i] = temp;
+        }
+        System.out.println("Стало: ");
+        printArr(arr);
+    }
+
+    static void printArr(int[] arr){
+
+
+        for (int n : arr)
+            System.out.print(n + " ");
+        System.out.println();
+
+    }
+
+
 }
