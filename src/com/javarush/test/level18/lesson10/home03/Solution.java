@@ -31,6 +31,7 @@ public class Solution { // слепое решение
         f1.close();
         f2.close();
         f3.close();
+        r.close();
     }
 
 }
