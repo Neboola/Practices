@@ -18,21 +18,18 @@ public class Solution {
         }
 
         @Override
-        public void setModel(List rows)
-        {
+        public void setModel(List rows) {
             System.out.println(rows.size());
             original.setModel(rows);
         }
 
         @Override
-        public String getHeaderText()
-        {
+        public String getHeaderText() {
             return original.getHeaderText().toUpperCase();
         }
 
         @Override
-        public void setHeaderText(String newHeaderText)
-        {
+        public void setHeaderText(String newHeaderText) {
             original.setHeaderText(newHeaderText);
         }
     }
