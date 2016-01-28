@@ -35,9 +35,9 @@ public class Solution { // проблема, если решать через ma
         while (true) {
             String filename = r.readLine();
             if (filename.equals("exit")) {
-                r.close();
                 exec.shutdown();
                 printResultMap();
+                r.close();
                 return;
             }
             exec.execute(new ReadThread(filename));
@@ -64,6 +64,7 @@ public class Solution { // проблема, если решать через ma
 
         @Override
         public void run() {
+
             String filename = getName();
             try {
                 FileInputStream fis = new FileInputStream(filename);
@@ -84,7 +85,7 @@ public class Solution { // проблема, если решать через ma
                         maxCount = arr[bait];
                     }
                 }
-                System.out.print("max count = " + maxCount + " ");
+                System.out.print(filename + ": max count = " + maxCount + " ");
 
                 List<Integer> list = new ArrayList<>();
 
@@ -94,7 +95,7 @@ public class Solution { // проблема, если решать через ma
                         list.add(i);
                     }
                 }
-                //System.out.println(list);
+                System.out.println();
 
                 writeToMap(filename, list);
 
@@ -103,6 +104,8 @@ public class Solution { // проблема, если решать через ma
             } catch ( IOException e) {
                 e.printStackTrace();
             }
+
+
         }
     }
 }
