@@ -41,7 +41,7 @@ public class Solution { // проблема, если решать через ma
                 return;
             }
             exec.execute(new ReadThread(filename));
-        }    
+        }
     }
 
     private static synchronized void writeToMap(String filename, List<Integer> baits) {
