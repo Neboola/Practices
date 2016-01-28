@@ -15,4 +15,7 @@ package com.javarush.test.level18.lesson10.home10;
  Закрыть потоки. Не использовать try-with-resources
  */
 public class Solution {
+
+    
+
 }
